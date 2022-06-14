@@ -1,6 +1,8 @@
 ﻿using Android.App;
 using Android.Runtime;
 
+
+
 namespace DistanceToTheFlag.App;
 [Application]
 public class MainApplication : MauiApplication
