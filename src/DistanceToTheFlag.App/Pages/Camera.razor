@@ -2,13 +2,19 @@
 
 @using DistanceToTheFlag.App.Camera.Exceptions
 @using DistanceToTheFlag.App.Camera.Modules
+@using DistanceToTheFlag.App.Photo
 @inject ICameraModule _cameraModule
+@inject IPhotoModule _photoModule
 
 <div>
     <h3>Camera</h3>
-    <button @onclick="TakePhoto">Take Photo</button>
-    <img src="@_photoFilePath"/>
+    <button class="btn btn-primary" @onclick="TakePhoto">Take Photo</button>
+    @if(_imageSource is not null)
+    {
+        <img src="@_imageSource" height="400" width="300"/>
+    }
 </div>
+
 @if(_exception is not null)
 {
     <p>@_exception.Message</p>
@@ -16,15 +22,17 @@
 
 @code {
     private Exception _exception;
-    private string _photoFilePath;
-
+    private string _imageSource;
 
     protected async Task TakePhoto()
     {
         try
         {
             var photo = await _cameraModule.TakePhoto();
-            _photoFilePath = Path.Combine(FileSystem.CacheDirectory, photo.FileName);
+            var photoPath = Path.Combine(FileSystem.CacheDirectory, photo.FileName);
+            var imageBytes = File.ReadAllBytes(photoPath);
+            var base64image = Convert.ToBase64String(imageBytes);
+            _imageSource = string.Format("data:image/jpg;base64,{0}", base64image);
             StateHasChanged();
         }
         catch(CameraNotSupportedException ex)

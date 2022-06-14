@@ -1,5 +1,6 @@
 ﻿using DistanceToTheFlag.App.Camera.Modules;
 using DistanceToTheFlag.App.Data;
+using DistanceToTheFlag.App.Photo;
 using Microsoft.AspNetCore.Components.WebView.Maui;
 
 namespace DistanceToTheFlag.App;
@@ -22,6 +23,7 @@ public static class MauiProgram
 
         builder.Services.AddSingleton<WeatherForecastService>();
         builder.Services.AddSingleton<ICameraModule, CameraModule>();
+        builder.Services.AddSingleton<IPhotoModule, PhotoModule>();
 
         return builder.Build();
     }

@@ -11,6 +11,7 @@ public class CameraModule : ICameraModule
         }
 
         FileResult photo = await MediaPicker.Default.CapturePhotoAsync();
+        
         if (photo != null)
         {
             // save the file into local storage
