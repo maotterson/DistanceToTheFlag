@@ -1,11 +1,35 @@
 ﻿@page "/camera"
 
+@using DistanceToTheFlag.App.Camera.Exceptions
 @using DistanceToTheFlag.App.Camera.Modules
 @inject ICameraModule _cameraModule
 
-<h3>Camera</h3>
-
+<div>
+    <h3>Camera</h3>
+    <button @onclick="TakePhoto">Take Photo</button>
+    <img src="@_photoFilePath"/>
+</div>
+@if(_exception is not null)
+{
+    <p>@_exception.Message</p>
+}
 
 @code {
+    private Exception _exception;
+    private string _photoFilePath;
 
+
+    protected async Task TakePhoto()
+    {
+        try
+        {
+            var photo = await _cameraModule.TakePhoto();
+            _photoFilePath = Path.Combine(FileSystem.CacheDirectory, photo.FileName);
+            StateHasChanged();
+        }
+        catch(CameraNotSupportedException ex)
+        {
+            _exception = ex;
+        }
+    }
 }
