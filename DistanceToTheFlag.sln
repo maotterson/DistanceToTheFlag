@@ -5,7 +5,7 @@ VisualStudioVersion = 17.2.32505.173
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{EACC4227-BD93-4149-B3E3-A4D0A182830C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistanceToTheFlag.App", "src\DistanceToTheFlag.App\DistanceToTheFlag.App.csproj", "{CEF32263-1100-4D55-B821-31D65A351E33}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DistanceToTheFlag.App", "src\DistanceToTheFlag.App\DistanceToTheFlag.App.csproj", "{CEF32263-1100-4D55-B821-31D65A351E33}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
