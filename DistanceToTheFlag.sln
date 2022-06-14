@@ -7,6 +7,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{EACC4227-BD9
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DistanceToTheFlag.App", "src\DistanceToTheFlag.App\DistanceToTheFlag.App.csproj", "{CEF32263-1100-4D55-B821-31D65A351E33}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistanceToTheFlag.ImageCalculation", "samples\DistanceToTheFlag.ImageCalculation\DistanceToTheFlag.ImageCalculation.csproj", "{38F140E0-380B-4F23-97D2-5307E373A90A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{DF4018BC-C4A6-4C0E-AAE9-025D10A1010E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistanceToTheFlag.Application", "src\DistanceToTheFlag.Application\DistanceToTheFlag.Application.csproj", "{82244250-9A74-4356-AAE0-8AA0C079B6FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,12 +25,22 @@ Global
 		{CEF32263-1100-4D55-B821-31D65A351E33}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CEF32263-1100-4D55-B821-31D65A351E33}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CEF32263-1100-4D55-B821-31D65A351E33}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{38F140E0-380B-4F23-97D2-5307E373A90A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38F140E0-380B-4F23-97D2-5307E373A90A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38F140E0-380B-4F23-97D2-5307E373A90A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38F140E0-380B-4F23-97D2-5307E373A90A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82244250-9A74-4356-AAE0-8AA0C079B6FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82244250-9A74-4356-AAE0-8AA0C079B6FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82244250-9A74-4356-AAE0-8AA0C079B6FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82244250-9A74-4356-AAE0-8AA0C079B6FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{CEF32263-1100-4D55-B821-31D65A351E33} = {EACC4227-BD93-4149-B3E3-A4D0A182830C}
+		{38F140E0-380B-4F23-97D2-5307E373A90A} = {DF4018BC-C4A6-4C0E-AAE9-025D10A1010E}
+		{82244250-9A74-4356-AAE0-8AA0C079B6FD} = {EACC4227-BD93-4149-B3E3-A4D0A182830C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BED45444-25DB-4256-ADED-7E61AD78B904}
