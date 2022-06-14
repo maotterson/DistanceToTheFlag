@@ -30,6 +30,8 @@
 
   <Capabilities>
     <rescap:Capability Name="runFullTrust" />
+	<uap:Capability Name="microphone"/>
+	<uap:Capability Name="webcam"/>
   </Capabilities>
 
 </Package>
