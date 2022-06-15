@@ -9,7 +9,7 @@ var base64image = Convert.ToBase64String(imageBytes);
 var imageSource = string.Format("data:image/jpg;base64,{0}", base64image);
 var image = new Bitmap(photoPath);
 var items = image.PropertyItems;
-
+/*
 var photograph = new PhotographOfObject
 {
     FocalLength = focalLength,
@@ -20,7 +20,7 @@ var photograph = new PhotographOfObject
 };
 
 var distance = photograph.GetDistanceToObject();
-
+*/
 internal class PhotographOfObject
 {
     public double FocalLength { get; init; }
