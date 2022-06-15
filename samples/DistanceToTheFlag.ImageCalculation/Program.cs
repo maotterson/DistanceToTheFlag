@@ -1,16 +1,16 @@
-﻿using System.Drawing;
+﻿using DistanceToTheFlag.ImageCalculation;
+using System.Drawing;
 
 var actualSubjectHeight = 0;
-var actualSubjectWidth = 0;
 
+// load image
 var photoPath = "./images/sample.jpg";
 var imageBytes = File.ReadAllBytes(photoPath);
 var base64image = Convert.ToBase64String(imageBytes);
 var imageSource = string.Format("data:image/jpg;base64,{0}", base64image);
 var image = new Bitmap(photoPath);
-var items = image.PropertyItems;
 
-
+// instantiate photograph of object class
 var focalLength = image.GetFocalLength();
 var sensorHeight = image.GetSensorHeight();
 var photograph = new PhotographOfObject
@@ -24,17 +24,3 @@ var photograph = new PhotographOfObject
 
 var distance = photograph.GetDistanceToObject();
 
-internal class PhotographOfObject
-{
-    public double FocalLength { get; init; }
-    public double RealHeight { get; init; }
-    public int ImageHeight { get; init; } // pixels
-    public int ObjectHeight { get; init; } // pixels
-    public double SensorHeight { get; init; }
-    public double GetDistanceToObject()
-    {
-        return (FocalLength * RealHeight * ImageHeight) /
-            (ObjectHeight * SensorHeight);
-    }
-
-}
